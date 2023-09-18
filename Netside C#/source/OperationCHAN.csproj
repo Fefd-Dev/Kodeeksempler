@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-OperationCHAN-3EBC5DAE-A104-42AC-97A3-E96C790AD586</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+        <None Include="wwwroot\img\notPass.gif" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNet.Security.OAuth.Discord" Version="6.0.14" />
+        <PackageReference Include="Ical.Net" Version="4.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+        <PackageReference Include="Npgsql" Version="6.0.7" />
+        <PackageReference Include="SendGrid" Version="9.28.1" />
+
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\.gitignore" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\bower.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\index-svg.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\index.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\index.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\jquery.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\LICENSE" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\qrcodejs\README.md" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\signalr\dist\browser\signalr.js" />
+      <_ContentIncludedByDefault Remove="Views\AccessDenied\index.cshtml" />
+    </ItemGroup>
+
+</Project>

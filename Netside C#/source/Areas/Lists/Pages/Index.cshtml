@@ -1,0 +1,34 @@
+﻿@page
+@model OperationCHAN.Areas.Lists.Pages.List
+@{
+    ViewData["Title"] = "Courses";
+}
+
+
+<body class="text-center">
+<div class="navbar">
+
+    <div id="queue-title">Lab Queues</div>
+
+</div>
+<div class="box">
+    @{
+        <ul class="list-group" style="background-color: transparent">
+            @if (User.IsInRole("Studass"))
+            {
+                @foreach (var list in Model.StudassItems.OrderBy(x => x.Course))
+                {
+                    <a style="background-color: transparent; color: white" href="/lists/helplist/@list.Course" class="list-group-item border-0">@list.Course</a>
+                }
+            }
+            else if (User.IsInRole("Admin"))
+            {
+                @foreach (var list in Model.AdminItems.OrderBy(x => x.CourseCode))
+                {
+                    <a style="background-color: transparent; color: white" href="/lists/helplist/@list.CourseCode" class="list-group-item border-0">@list.CourseCode</a>
+                }
+            }
+        </ul>
+    }
+</div>
+</body>

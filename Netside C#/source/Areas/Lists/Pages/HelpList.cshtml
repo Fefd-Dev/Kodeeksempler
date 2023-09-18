@@ -1,0 +1,47 @@
+﻿@page "{id}"
+@model OperationCHAN.Areas.Lists.Pages.HelpList
+
+<script type="text/javascript">
+    let courseCode = "@RouteData.Values["id"]";
+    courseCode = courseCode.toString();
+</script>
+
+@{
+    ViewData["Title"] = "Lab Queue";
+}
+
+<body>
+<div class="navbar d-flex flex-row">
+    
+    <div class="col-sm" id="queue-title">Lab Queue @RouteData.Values["id"]</div>
+
+    <div class="col-sm d-flex flex-row-reverse" id="form">
+        <a class="nav-link text-white" href="/Lists/Archive/@RouteData.Values["id"]">Archive</a>
+    </div>
+
+</div>
+<table id="table">
+    <tr>
+        <th>Nickname</th>
+        <th>Description</th>
+        <th>Room</th>
+        <th></th>
+    </tr>
+    @{
+        foreach (var ticket in Model.Tickets)
+        {
+            <tr id="@ticket.Id">
+                <td>@Html.DisplayFor(item => ticket.Nickname)</td>
+                <td>@Html.DisplayFor(item => ticket.Description)</td>
+                <td>@Html.DisplayFor(item => ticket.Room)</td>
+                <td class="tdButton">
+                    <button type="submit" onclick="archive(event)" class="btn uaButton">Archive</button>
+                </td>
+            </tr>
+        }
+    }
+</table>
+</body>
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/helplist.js"></script>
