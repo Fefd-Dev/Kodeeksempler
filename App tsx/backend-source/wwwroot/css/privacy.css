@@ -1,0 +1,24 @@
+#content {
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    text-align: center;
+}
+#markdown {
+    width: 80%;
+    margin: 20px;
+    align-self: center;
+    background-color: #004A82;
+    border-radius: 30px;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+body {
+    background-color: #0070C0;
+    font-family: "Ah Aharoni", "Bahnschrift";
+    color: white;
+}
+

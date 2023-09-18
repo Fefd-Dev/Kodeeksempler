@@ -1,0 +1,35 @@
+﻿table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#queue-title {
+    font-family: "Ah Aharoni", "Bahnschrift";
+    font-size: 40px;
+    color: white;
+    padding-left: 2vw;
+}
+
+/* Unarchive button on hover & focus */
+.tdButton:hover {
+    background-color: #2980B9;
+}
+
+.tdButton {
+    width: 5vw;
+}

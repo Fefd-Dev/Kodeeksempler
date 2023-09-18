@@ -1,0 +1,11 @@
+.idea
+bin
+cmake-build-*
+obj
+venv
+*.db
+*.pyc
+*.swp
+app.db-shm
+app.db-wal
+appsettings.json
